@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import sveltePlugin from "@sveltejs/vite-plugin-svelte";
+import ViteFonts from "vite-plugin-fonts";
 
 function viteHapticSingleFile() {
     return {
@@ -43,7 +44,12 @@ function viteHapticSingleFile() {
 export default defineConfig({
   plugins: [
     viteHapticSingleFile(),
-    sveltePlugin()
+    sveltePlugin(),
+    // ViteFonts({
+    //     google: {
+    //       families: ['Roboto']
+    //     },
+    // }),
   ],
   build: {
     cssCodeSplit: false,
